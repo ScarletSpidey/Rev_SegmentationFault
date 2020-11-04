@@ -1,3 +1,3 @@
-# Rev_SegmentationFault
+# Samriddhi
 Hackathon Submission Rep for Rev
-Samriddhi
+
