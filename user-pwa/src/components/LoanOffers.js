@@ -14,17 +14,17 @@ class LoanOffers extends Component{
                         </div>    
                     </div>
 
-                    <div className="flex flex-wrap -m-4">
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
-                        <LoanOfferCard />
+                    <div className="flex flex-wrap -m-4 mb-6">
+                        <LoanOfferCard bankName="Rashi Bank" loanAmount={50000} loanDuration={6} loanType="Buisness" id="1001" />
+                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={30000} loanDuration={4} loanType="Personal" id="1002" />
+                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={10000} loanDuration={1} loanType="Buisness" id="1003" />
+                        <LoanOfferCard bankName="IDIDI Bank" loanAmount={5000} loanDuration={1} loanType="Personal" id="1004" />  
+                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={45000} loanDuration={5} loanType="Personal" id="1005" />
+                        <LoanOfferCard bankName="IDIDI Bank" loanAmount={80000} loanDuration={8} loanType="Buisness" id="1006" />
+                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={5000} loanDuration={3} loanType="Personal" id="1007" />
+                        <LoanOfferCard bankName="Rashi Bank" loanAmount={7000} loanDuration={2} loanType="Buisness" id="1008" />
+                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={12500} loanDuration={3} loanType="Personal" id="1009" />
+                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={50000} loanDuration={12} loanType="Personal" id="1010" />
 
                     </div>
 
