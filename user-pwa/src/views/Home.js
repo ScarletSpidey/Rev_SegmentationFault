@@ -31,6 +31,8 @@ const Home = () => {
                                 <p className="text-base text-gray-600">Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.</p>
                             </div>
                             </div>
+                        </div>
+                        <div className ="flex  flex-col sm:flex-row mt-10">
                             <center>
                                 <div>
                                     <div className="flex justify-center pt-10">
