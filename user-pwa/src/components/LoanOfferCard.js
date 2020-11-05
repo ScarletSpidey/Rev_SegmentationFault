@@ -1,13 +1,8 @@
 import React from 'react'
 
-import {
-    ModalProvider,
-    Modal,
-    useModal,
-    ModalTransition,
-  } from 'react-simple-hook-modal';
 
-  import '../assets/modal.css';
+
+import {Link} from 'react-router-dom'
 
 const ReturnLogo = (BankName) => {
     if(BankName === "Rashi Bank"){
@@ -77,80 +72,8 @@ const ReturnLogo = (BankName) => {
     
 }
 
-const ModalContent = () => {
-    const { isModalOpen, openModal, closeModal } = useModal();
-    return (
-      <>
-        <Modal
-          id="2"
-          isOpen={isModalOpen}
-          onBackdropClick={closeModal}
-          transition={ModalTransition.SCALE}
-        >
-          <p>This modal can be closed by clicking the backdrop.</p>
-        </Modal>
-        
-        <div className="text-center pt-12">
-            <span className="text-2xl font-bold pb-6 text-white">
-            Would you like to Request for this Loan ? 
-            </span>
-        </div>
-        <div className="flex justify-center pt-12">
-            <button onClick={openModal} className="inline-flex text-white font-bold bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded-full text-lg">Yes</button>
-            <button className="ml-4 inline-flex text-gray-100 font-bold bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded-full text-lg" onClick={closeModal}>No</button>
-        </div>
-      </>
-    );
-  };
 
-const MyComponent = (props) => {
-    const { isModalOpen, openModal, closeModal } = useModal();
-  
-    return (
-      <>
-        <div className="flex justify-end pt-10">
-            <button onClick={openModal} className="inline-flex text-white bg-orange-500 border-0 py-1 px-4 focus:outline-none hover:bg-orange-600 rounded-full text-sm">Learn More
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5 ml-1" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-        <Modal
-          id={props.id}
-          isOpen={isModalOpen}
-          transition={ModalTransition.SCALE}
-          onBackdropClick={closeModal}
-        >
-            <div className="mx-auto flex flex-wrap p-3 flex-col md:flex-row items-end">
-                <button className="flex title-font font-medium items-center text-white md:mb-0" onClick={closeModal}>
-                    <svg className="w-8 h-8 text-white p-2 bg-red-500 rounded-full"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
-                </button>
-            </div>
-            <div className="text-2xl font-bold text-white">
-                {props.name} 's Offer :
-            </div>
-            <br />
-            <span className="text-xl pb-6">
-                Loan Amount : <span className="text-xl font-bold text-green-500">{"₹"+props.amount}</span>
-            </span>
-            <br />
-            
-            <span className=" text-xl pb-6">
-                Type : <span className="font-bold text-white">{props.type}</span>
-            </span>
-            <br />
-            <span className="text-xl pb-6">
-                Duration : <span className="font-bold text-white">{props.duration + " Months"}</span>
-            </span>
-            <br /> <br />
 
-            <ModalContent />
-            
-
-        </Modal>
-      </>
-    );
-  };
 
 const LoanOfferCard = (props) => {
     return(
@@ -175,9 +98,15 @@ const LoanOfferCard = (props) => {
                         Duration : <span className="font-bold text-white">{props.loanDuration + " Months"}</span>
                     </span>
                 </div>
-                <ModalProvider>
-                    <MyComponent name={props.bankName} amount={props.loanAmount} type={props.loanType} duration={props.loanDuration} id={props.id} />
-                </ModalProvider>
+                <div className="flex justify-end pt-10">
+                    <Link to={`/loan/${props.id}`}>
+                        <button className="inline-flex text-white bg-orange-500 border-0 py-1 px-4 focus:outline-none hover:bg-orange-600 rounded-full text-sm">Learn More
+                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5 ml-1" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
