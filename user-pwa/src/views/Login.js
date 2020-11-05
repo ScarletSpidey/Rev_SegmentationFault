@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Img from "../assets/login.svg"
 
+import {Link} from "react-router-dom"
+
 class Login extends Component{
     render(){
         return(
@@ -22,7 +24,9 @@ class Login extends Component{
                                 <input className="bg-gray-900 rounded-full border text-white border-gray-900 focus:outline-none focus:border-orange-500 text-base px-4 py-2 mb-4" placeholder="Email" type="email" />
                                 <input className="bg-gray-900 rounded-full border text-white border-gray-900 focus:outline-none focus:border-orange-500 text-base px-4 py-2 mb-4" placeholder="Password" type="password" />
                                 <center className="pt-4">
-                                    <button className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded-full mr-2">Submit</button>
+                                    <Link to="/app">
+                                        <button className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded-full mr-2">Submit</button>
+                                    </Link>
                                     or
                                     <a className="text-orange-500 inline-flex items-center ml-2 text-lg font-light" href="/register">Register
                                     </a>

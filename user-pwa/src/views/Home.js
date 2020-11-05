@@ -10,7 +10,7 @@ const Home = () => {
                     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                         <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="/home">
                             <svg className="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
-                            <span className="ml-3 text-xl">Name It</span>
+                            <span className="ml-3 text-xl">Samriddhi</span>
                         </a> 
                     </div>
                 </header>
