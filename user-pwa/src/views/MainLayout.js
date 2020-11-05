@@ -72,7 +72,7 @@ const Tabs = ({ color }) => {
                         className={
                             "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-full block  leading-normal " +
                             (openTab === 1
-                            ? "text-white bg-" + color + "-700"
+                            ? "text-white bg-" + color + "-500"
                             : "text-white bg-gray-800")
                         }
                         onClick={e => {
@@ -91,7 +91,7 @@ const Tabs = ({ color }) => {
                         className={
                             "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-full block leading-normal " +
                             (openTab === 2
-                            ? "text-white bg-" + color + "-700"
+                            ? "text-white bg-" + color + "-500"
                             : "text-white bg-gray-800")
                         }
                         onClick={e => {
@@ -110,7 +110,7 @@ const Tabs = ({ color }) => {
                         className={
                             "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-full block leading-normal " +
                             (openTab === 3
-                            ? "text-white bg-" + color + "-700"
+                            ? "text-white bg-" + color + "-500"
                             : "text-white bg-gray-800")
                         }
                         onClick={e => {
