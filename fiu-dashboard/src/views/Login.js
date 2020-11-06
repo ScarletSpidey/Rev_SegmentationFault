@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Link} from 'react-router-dom'
 import Img from '../assets/login.svg'
 
 
@@ -37,9 +37,12 @@ class Login extends Component{
                             placeholder="Password"
                             type="password"
                         />
-                        <button className="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-full text-lg">
-                            Log In
-                        </button>
+                        <Link to="/dashboard">
+                            <button className="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-full text-lg">
+                                Log In
+                            </button>
+                        </Link>
+                        
                         </div>
                     </div>
                 </section>
