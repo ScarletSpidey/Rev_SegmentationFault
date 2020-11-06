@@ -102,7 +102,9 @@ def pro(s):
     z=send_json(file_name)
     D={}
     D['name']=z['transactions']['profile']['name']
-    D['dob']=z['transactions']['profile']['Dob']
+    #D['dob']=z['transactions']['profile']['Dob']
+    sa=z['transactions']['profile']['Dob']
+    D['dob']=sa[:2]+"-"+sa[2:4]+"-"+sa[4:]
     D['mob']="+91 "+z['transactions']['profile']['mobile']
     D['email']=z['transactions']['profile']['email']
     return D

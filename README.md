@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300"  src="images/Logo.PNG">
+  <img width="300"  src="images/sflogo.png">
   <h1 align= "center">Stonks</h1>
 </p>
 We've all heard it, only those striving to fail tread unknown waters and make no efforts to actually know more about the lay of the land before erecting their home. Is stock investing any different? Be a hero, get to know your stonks and gain the wealth you've only dreamt about!
