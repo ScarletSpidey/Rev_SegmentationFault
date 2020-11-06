@@ -97,17 +97,17 @@ def send_json(file_name):
     d["recurring"]=D
     return d
 def main():
+    file_name="data.json"
     z=send_json(file_name)
     z["transactions"]["Details"]
     a=[]
     b=[]
     D={}
     for i in z:
-        d={}
-        d["amount"]=float(z[i]["CurrentBalance"])
-        d["date"]=z[i]['valueDate']
-        #print(i,z[i])
-        D[i]=d
+        a.append(float(z[i]["CurrentBalance"]))
+        b.append(z[i]['valueDate'])
+
+    D["amount"]=a
     return  D
 if __name__ == "__main__":
     main()
