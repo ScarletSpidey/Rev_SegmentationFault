@@ -3,7 +3,34 @@ import  React, { Component } from 'react'
 import { Doughnut } from "react-chartjs-2";
 
 
+import axios from 'axios';
+
+
+import {baseurl} from '../APIurl'
+
 class TransactionTypes extends Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+        data : [],
+        labels: ["UPI","FUNDS TRANSFER", "OTHERS"]
+    }
+  }
+
+
+    componentDidMount(){
+        axios.get(baseurl+"typ/")
+        .then(res => {
+            let resp = res.data
+            let total = resp.data[1] + resp.data[2] + resp.data[4]
+            console.log(resp)
+            let arr = [resp.data[0],resp.data[3],total]
+            this.setState({
+              data: arr
+            })
+        })
+    }
     render(){
 
         let chartExample5 = {
@@ -37,7 +64,7 @@ class TransactionTypes extends Component{
               colors.push(gradientStroke3)
           
               return {
-                labels: ["sadf" ,"asdfasdf", "asdfasd"],
+                labels: this.state.labels,
                 datasets: [
                   {
                     fill: true,
@@ -47,7 +74,7 @@ class TransactionTypes extends Component{
                     borderWidth: 2,
                     borderDash: [],
                     borderDashOffset: 0.0,
-                    data: [34,56,86]
+                    data: this.state.data
                   }
                 ]
               };
@@ -72,7 +99,7 @@ class TransactionTypes extends Component{
 
         return(
                 <div className="p-4 w-1/2">
-                    <div className="h-full w-full bg-gray-800 px-8 pt-8 pb-12 rounded-lg relative text-center">
+                    <div className="h-full w-full bg-gray-800 px-8 pt-8 pb-8 rounded-lg relative text-center">
                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
                             Graph
                         </h2>

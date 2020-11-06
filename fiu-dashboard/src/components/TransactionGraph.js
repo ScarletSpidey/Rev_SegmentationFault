@@ -3,7 +3,35 @@ import  React, { Component } from 'react'
 import { Line } from "react-chartjs-2";
 
 
+import axios from 'axios';
+
+
+import {baseurl} from '../APIurl'
+
+
 class TransactionGraph extends Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+        amount : [],
+        date: []
+    }
+  }
+
+
+    componentDidMount(){
+        axios.get(baseurl+"trans/")
+        .then(res => {
+            let resp = res.data
+            console.log(resp)
+            this.setState({
+              amount : resp.amount,
+              date:resp.date
+            })
+        })
+    }
+
     render(){
 
         const chart1 = {
@@ -17,7 +45,7 @@ class TransactionGraph extends Component{
                 gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); 
         
                 return{
-                    labels: ["1","2","3","1","2","3","1","2","3"],
+                    labels: this.state.date,
                     datasets: [
                         {
                           label: "Axis Bank Average Unit",
@@ -34,7 +62,7 @@ class TransactionGraph extends Component{
                           pointHoverRadius: 4,
                           pointHoverBorderWidth: 15,
                           pointRadius: 0,
-                          data: [5,8,2,7,8,3,6,9,8]
+                          data: this.state.amount
                         }
                       ]
                 };
