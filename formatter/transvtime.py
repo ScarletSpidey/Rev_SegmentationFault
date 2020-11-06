@@ -99,7 +99,7 @@ def send_json(file_name):
 def transT():
     file_name="data.json"
     z=send_json(file_name)
-    z["transactions"]["Details"]
+    z=z["transactions"]["Details"]
     a=[]
     b=[]
     D={}
