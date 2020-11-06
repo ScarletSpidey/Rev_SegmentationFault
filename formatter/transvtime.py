@@ -73,7 +73,6 @@ def send_json(file_name):
         return D
     
     df1=pd.read_json(file_name)
-    names=["transactions","fixed","recurring"]
     d={}
     A=pd.json_normalize(df1["accounts"][0])  ### Transact
     B=pd.json_normalize(df1["accounts"][1]) ####FD
@@ -96,31 +95,18 @@ def send_json(file_name):
     D["Details"]=Trans(C)
     d["recurring"]=D
     return d
-def transT(s):
-    file_name=s+".json"
-    z=send_json(file_name)
-    z=z["transactions"]["Details"]
-    a=[]
-    b=[]
-    D={}
-    for i in z:
-        a.append(float(z[i]["CurrentBalance"]))
-        b.append(z[i]['valueDate'])
 
-    D["amount"]=a
-    D["date"]=b
 
-    return  D
-
-def fix(s):
+def pro(s):
     file_name=s+".json"
     z=send_json(file_name)
     D={}
-    D["current"]=float(z["fixed"]["summary"]["Current"])
-    D["final"]=float(z["fixed"]["summary"]["MaturityAmount"])
-    D["tenure"]=z["fixed"]["summary"]['tenure_days']+" days"
+    D['name']=z['transactions']['profile']['name']
+    D['dob']=z['transactions']['profile']['Dob']
+    D['mob']="+91 "+z['transactions']['profile']['mobile']
+    D['email']=z['transactions']['profile']['email']
+    return D
 
-    return  D
 def fin(s):
     file_name=s+".json"
     z=send_json(file_name)
@@ -139,19 +125,45 @@ def fin(s):
     D["avg"]=round(s/len(ss),2)
     D["cur"]=float(z["transactions"]["profile"]['CurrentAmount'])
     return D
-def pro(s):
-    file_name=s+".json"
-    z=send_json(file_name)
-    D={}
-    D['name']=z['transactions']['profile']['name']
-    D['dob']=z['transactions']['profile']['Dob']
-    D['mob']="+91 "+z['transactions']['profile']['mobile']
-    D['email']=z['transactions']['profile']['email']
-    return D
-def inv(s)
+
+def inv(s):
     file_name=s+".json"
     D={}
     z=send_json(file_name)
     D['no']=2
     D["amount"]=float(z['fixed']['profile']['CurrentAmount'])+float(z['recurring']['profile']['CurrentAmount'])
+    return D
+def trans(s):
+    file_name=s+".json"
+    z=send_json(file_name)
+    z=z["transactions"]["Details"]
+    a=[]
+    b=[]
+    D={}
+    for i in z:
+        a.append(float(z[i]["CurrentBalance"]))
+        b.append(z[i]['valueDate'])
+
+    D["amount"]=a
+    D["date"]=b
+
+    return  D
+def typ(s):
+    file_name=s+".json"
+    z=send_json(file_name)
+    z=z['transactions']['Details']
+    D={}
+    upi=0
+    card=0
+    atm=0
+    for i in z:
+        f=z[i]['Mode']
+        if f=="UPI":
+            upi+=1
+        if f=="CARD":
+            card+=1
+        if f=="ATM":
+            atm+=1
+
+    D['data']=[upi,card,atm]
     return D
