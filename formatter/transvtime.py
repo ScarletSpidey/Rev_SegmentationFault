@@ -111,5 +111,17 @@ def transT():
     D["date"]=b
 
     return  D
+
+def fix():
+    file_name="data.json"
+    z=send_json(file_name)
+    D={}
+    D["current"]=float(z["fixed"]["summary"]["Current"])
+    D["final"]=float(z["fixed"]["summary"]["MaturityAmount"])
+    D["tenure"]=z["fixed"]["summary"]['tenure_days']+" days"
+
+    return  D
+
+
 if __name__ == "__main__":
     transT()
