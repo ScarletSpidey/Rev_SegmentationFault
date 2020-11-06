@@ -96,8 +96,8 @@ def send_json(file_name):
     D["Details"]=Trans(C)
     d["recurring"]=D
     return d
-def transT():
-    file_name="data.json"
+def transT(s):
+    file_name=s+".json"
     z=send_json(file_name)
     z=z["transactions"]["Details"]
     a=[]
