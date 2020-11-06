@@ -96,7 +96,7 @@ def send_json(file_name):
     D["Details"]=Trans(C)
     d["recurring"]=D
     return d
-def main():
+def transT():
     file_name="data.json"
     z=send_json(file_name)
     z["transactions"]["Details"]
@@ -108,6 +108,8 @@ def main():
         b.append(z[i]['valueDate'])
 
     D["amount"]=a
+    D["date"]=b
+
     return  D
 if __name__ == "__main__":
-    main()
+    transT()
