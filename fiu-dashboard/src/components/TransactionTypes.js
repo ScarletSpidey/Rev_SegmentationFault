@@ -77,7 +77,7 @@ class TransactionTypes extends Component{
                             Graph
                         </h2>
                         <h1 className="title-font sm:text-2xl text-xl font-medium text-white mb-3">
-                            Transactions:
+                            Types of Transactions:
                         </h1>
                         <div className="flex w-full  px-5 pb-4 pt-8 bg-gray-800 text-white items-center" style={{ height:"350px" }}>
                         <Doughnut

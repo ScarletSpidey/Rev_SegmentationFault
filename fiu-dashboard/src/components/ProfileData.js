@@ -13,7 +13,7 @@ class ProfileData extends Component{
                         </h1>
                         <div className="">
                             <span className="text-white text-xl font-medium mb-6">
-                                Name : <span className="font-bold" > John Doe </span>
+                                Name : <span className="font-bold text-blue-500" > John Doe </span>
                             </span>
                             <br />
                             <span className="text-white text-xl font-medium mb-6">

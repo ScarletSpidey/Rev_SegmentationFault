@@ -24,6 +24,10 @@ const DetailsPage = () => {
                     <TransactionGraph />
                     <TransactionTypes />
             </div>
+            <div class="flex justify-end mr-64 pr-32">
+                <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded-full text-lg">Accept</button> &nbsp;&nbsp;&nbsp;
+                <button class="ml-4 inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg--700 hover:text-white rounded-full text-lg">Reject</button>
+            </div>
         </section>
     )
 }
