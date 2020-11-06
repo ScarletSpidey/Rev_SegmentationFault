@@ -121,7 +121,37 @@ def fix(s):
     D["tenure"]=z["fixed"]["summary"]['tenure_days']+" days"
 
     return  D
-
-
-if __name__ == "__main__":
-    transT()
+def fin(s):
+    file_name=s+".json"
+    z=send_json(file_name)
+    D={}
+    D["fix"]=float(z["fixed"]["summary"]["MaturityAmount"])
+    D["rec"]=float(z["recurring"]["profile"]['CurrentAmount'])
+    s=0
+    ss=[]
+    a=z["transactions"]['Details']
+    for i in a:
+        if a[i]['Type']=='CREDIT':
+            s+=float(a[i]['Amount'])
+            t=a[i]['valueDate'][5:7]
+            if t not in ss:
+                ss.append(t)
+    D["avg"]=round(s/len(ss),2)
+    D["cur"]=float(z["transactions"]["profile"]['CurrentAmount'])
+    return D
+def pro(s):
+    file_name=s+".json"
+    z=send_json(file_name)
+    D={}
+    D['name']=z['transactions']['profile']['name']
+    D['dob']=z['transactions']['profile']['Dob']
+    D['mob']="+91 "+z['transactions']['profile']['mobile']
+    D['email']=z['transactions']['profile']['email']
+    return D
+def inv(s)
+    file_name=s+".json"
+    D={}
+    z=send_json(file_name)
+    D['no']=2
+    D["amount"]=float(z['fixed']['profile']['CurrentAmount'])+float(z['recurring']['profile']['CurrentAmount'])
+    return D
