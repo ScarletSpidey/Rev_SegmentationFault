@@ -112,8 +112,8 @@ def transT():
 
     return  D
 
-def fix():
-    file_name="data.json"
+def fix(s):
+    file_name=s+".json"
     z=send_json(file_name)
     D={}
     D["current"]=float(z["fixed"]["summary"]["Current"])
