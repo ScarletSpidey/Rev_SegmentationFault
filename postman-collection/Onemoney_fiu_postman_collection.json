@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "cef09811-91cb-46e6-963e-07494ba1132e",
+		"name": "Onemoney_FIU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consent Flow",
+			"item": [
+				{
+					"name": "/Consent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "182780bf-072f-4d69-b69e-fbd81d97cfd5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "87c007e8-f08f-4e2f-818d-42e3514265a8",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ver\": \"1.1.3\",\n  \"timestamp\": \"2020-07-03T14:25:33.440Z\",\n  \"txnid\": \"4a4adbbe-29ae-11e8-a8d7-0289437bf331\",\n  \"ConsentDetail\": {\n    \"consentStart\": \"2020-07-03T14:25:33.440Z\",\n    \"consentExpiry\": \"2020-12-06T11:39:57.153Z\",\n    \"consentMode\": \"VIEW\",\n    \"fetchType\": \"ONETIME\",\n    \"consentTypes\": [\n      \"TRANSACTIONS\",\n      \"PROFILE\",\n      \"SUMMARY\"\n    ],\n    \"fiTypes\": [\n      \"DEPOSIT\"\n    ],\n    \"DataConsumer\": {\n      \"id\": \"finprobank\"\n    },\n    \"Customer\": {\n      \"id\": \"1999999999@onemoney\"\n    },\n    \"Purpose\": {\n      \"code\": \"101\",\n      \"refUri\": \"https://api.rebit.org.in/aa/purpose/101.xml\",\n      \"text\": \"Wealth management service\",\n      \"Category\": {\n        \"type\": \"string\"\n      }\n    },\n    \"FIDataRange\": {\n      \"from\": \"2018-12-06T11:39:57.153Z\",\n      \"to\": \"2020-07-03T14:25:33.440Z\"\n    },\n    \"DataLife\": {\n      \"unit\": \"MONTH\",\n      \"value\": 1\n    },\n    \"Frequency\": {\n      \"unit\": \"MONTH\",\n      \"value\": 1\n    },\n    \"DataFilter\": [\n      {\n        \"type\": \"TRANSACTIONAMOUNT\",\n        \"operator\": \">=\",\n        \"value\": \"20000\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/Consent",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"Consent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Consent/handle/{consentHandle}",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d7cc2abb-fc1b-4ce1-b57c-795e3e8267f6",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "aee3e5f4-90fd-42f5-a307-f1b87a3167e2",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/Consent/handle/0f7d692d-0561-484b-b2d6-946b76792862",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"Consent",
+								"handle",
+								"0f7d692d-0561-484b-b2d6-946b76792862"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/Consent/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df7e8ce6-8e79-49bb-b530-01f225275b80",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6d6bdfea-134e-47a6-be09-cf00b0721708",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/Consent/40f3d470-111c-4ec0-8dd5-4c6d4efe5e77",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"Consent",
+								"40f3d470-111c-4ec0-8dd5-4c6d4efe5e77"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Data Flow",
+			"item": [
+				{
+					"name": "/FI/request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c6fc86c2-0117-419b-837a-00e5710b004b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1cb71755-6328-423c-8c0e-67e0dbdb5fe3",
+								"exec": [
+									"var current_timestamp = new Date();\r",
+									"postman.setEnvironmentVariable(\"current_timestamp\", current_timestamp.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ver\": \"1.1.3\",\n  \"timestamp\": \"{{current_timestamp}}\",\n  \"txnid\": \"e8cc6822-d4bb-4eb1-9e1b-4996fbff8acb\",\n  \"FIDataRange\": {\n    \"from\": \"2018-12-06T11:39:57.153Z\",\n    \"to\": \"2020-06-30T16:30:16.363Z\"\n  },\n  \"Consent\": {\n    \"id\": \"eb3eed13-e558-4910-ad0e-f799c391486f\",\n    \"digitalSignature\": \"NA\"\n  },\n  \"KeyMaterial\": {\"cryptoAlg\":\"ECDH\",\"curve\":\"Curve25519\",\"params\":\"string\",\"DHPublicKey\":{\"expiry\":\"2020-07-04T21:38:16.681Z\",\"Parameters\":\"string\",\"KeyValue\":\"-----BEGIN PUBLIC KEY-----MIIBMTCB6gYHKoZIzj0CATCB3gIBATArBgcqhkjOPQEBAiB/////////////////////////////////////////7TBEBCAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqYSRShRAQge0Je0Je0Je0Je0Je0Je0Je0Je0Je0Je0JgtenHcQyGQEQQQqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq0kWiCuGaG4oIa04B7dLHdI0UySPU1+bXxhsinpxaJ+ztPZAiAQAAAAAAAAAAAAAAAAAAAAFN753qL3nNZYEmMaXPXT7QIBCANCAARXDhD4L9wYikmlHHybnW28Df57nuJkYNGiLvWbF/GsxlS0SkLsDVo7mdT0mYzygYlck5Sd9eJPhTRE2u9OABDS-----END PUBLIC KEY-----\"},\"Nonce\":\"OEFoc1RNVGVUZG15ZGJuWW0xTVM4VlZZNW85RTYwR1c=\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/FI/request",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"FI",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/FI/fetch/{sessionId}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e3ecc55-efe8-4397-b1f9-aa2a8682c7c5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c96a7fae-8e51-4c8f-83d1-b4e76238f8fe",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/FI/fetch/475d6cf5-8635-42f3-8b43-db7f5de34e08",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"FI",
+								"fetch",
+								"475d6cf5-8635-42f3-8b43-db7f5de34e08"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": " Monitoring",
+			"item": [
+				{
+					"name": "/Heartbeat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c73b5153-cb9c-490c-89db-e4660d9b0703",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0b4deb1e-b8d6-483e-9dad-150da7ff8367",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_api_key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/Heartbeat",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"Heartbeat"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Consent Notifications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "client_api_key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ver\": \"1.0\",\r\n    \"timestamp\": \"2018-12-06T11:39:57.153Z\",\r\n    \"txnid\": \"0b811819-9044-4856-b0ee-8c88035f8858\",\r\n    \"Notifier\": {\r\n        \"type\": \"FIU\",\r\n        \"id\": \"FIU-1\"\r\n    },\r\n    \"ConsentStatusNotification\": {\r\n        \"consentId\": \"XXXX0-XXXX-XXXX\",\r\n        \"consentStatus\": \"REJECTED\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-sandbox.onemoney.in/aa/Consent/Notification",
+							"protocol": "https",
+							"host": [
+								"api-sandbox",
+								"onemoney",
+								"in"
+							],
+							"path": [
+								"aa",
+								"Consent",
+								"Notification"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
