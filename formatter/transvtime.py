@@ -156,6 +156,8 @@ def typ(s):
     upi=0
     card=0
     atm=0
+    other=0
+    ft=0
     for i in z:
         f=z[i]['Mode']
         if f=="UPI":
@@ -164,6 +166,10 @@ def typ(s):
             card+=1
         if f=="ATM":
             atm+=1
+        if f=="FT":
+            ft+=1
+        if f=="OTHERS" or f=="CARD":
+            other+=1   
 
-    D['data']=[upi,card,atm]
+    D['data']=[upi,card,atm,ft,other]
     return D
