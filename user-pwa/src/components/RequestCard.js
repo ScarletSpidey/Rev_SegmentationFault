@@ -30,7 +30,7 @@ const RequestCard = (props) =>{
                   </span>
                   <br />
                   <span className="text-sm pb-2 text-white">
-                      Status : <span className="font-bold text-orange-500">Pending</span>
+                      Status : <span className="font-bold text-green-500">Approved</span>
                   </span>
                 </div>
             </div>
