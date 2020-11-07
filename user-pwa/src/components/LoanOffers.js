@@ -48,25 +48,25 @@ class LoanOffers extends Component{
 
                     <div className="flex flex-wrap -m-4 mb-6">
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
-                        {i=i+1}
+                        <div className="text-gray-900">{i=i+1}</div>
                         
                         
                     </div>
