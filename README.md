@@ -7,7 +7,8 @@ Have a transaction stuck up due to undelivered documentation? Unable to cope wit
 ## Deliverables
 
 * ### [Presentation:]() Will be updated soon.
-* ### [Website:](https://stonks-b00mgpmji.vercel.app/) Please follow the link
+* ### [User App:](https://vercel.com/scarletspidey/rev-segmentation-fault/aqarfspow) Please follow the link (Work In Progress)
+* ### [FIU website:](https://vercel.com/scarletspidey/fiu-dashboard/2vwqa5o4l) Please follow the link (Work In Progress)
 
 
 ## Overview  
