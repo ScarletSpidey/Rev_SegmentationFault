@@ -1,8 +1,8 @@
 <p align="center">
   <img width="300"  src="images/sflogo.png">
-  <h1 align= "center">Stonks</h1>
+  <h1 align= "center">Samriddhi</h1>
 </p>
-We've all heard it, only those striving to fail tread unknown waters and make no efforts to actually know more about the lay of the land before erecting their home. Is stock investing any different? Be a hero, get to know your stonks and gain the wealth you've only dreamt about!
+Have a transaction stuck up due to undelivered documentation? Unable to cope with the confusing and tedious procedure of taking out a loan? Then this is the app for you! Sign up and we promise your application will not bounce!
 
 ## Deliverables
 
@@ -10,7 +10,7 @@ We've all heard it, only those striving to fail tread unknown waters and make no
 * ### [Website:](https://stonks-b00mgpmji.vercel.app/) Please follow the link
 
 
-## Solution Highlights  
+## Overview  
 
 
 1. XGBoost is an ensemble technqiue based on decision trees that leverages gradient boosting for fast speed and high performance.
