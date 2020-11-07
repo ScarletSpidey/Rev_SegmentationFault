@@ -63,7 +63,7 @@ The following are the three tabs of the FIU dashboard website.
  
 
 # Team
-<img src="images/team.PNG">
+<img src="images/team.png">
 
  * ### Karan Nandwani 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/karan-nandwani-16aa66176/)     [<img src="images/github.png">](https://github.com/karannandwani)
