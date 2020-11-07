@@ -176,7 +176,7 @@ def typ(s):
     D['data']=[upi,card,atm,ft,other]
     return D
 def loan():
-    a=[]
+    D={}
     idx=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010]
     name=["Rashi Bank","Premium Bank Corp.","New Walth Trust","IDIDI Bank","Premium Bank Corp","IDIDI Bank","New Wealth Trust","Rashi Bank","Rashi Bank","New Wealth Trust"]
     amount=[50000,30000,5000,45000,80000,50000,5000,7000,12500,50000]
@@ -191,7 +191,7 @@ def loan():
         d["duration"]=duration[i]
         d["type"]=ty[i]
         d["interest"]=interest[i]
-        a.append(d)
-    return a
+        D[i]=d
+    return D
 def bank():
     return loan()[0]
