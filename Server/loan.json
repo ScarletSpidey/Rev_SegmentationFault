@@ -1,0 +1,84 @@
+{
+    1001:{
+        id: "1001",
+        name: "Rashi Bank",
+        amount:50000,
+        duration:6,
+        type:"Buisness",
+        intrest: 10
+    },
+    1002:{
+        id: "1002",
+        name: "Premium Bank Corp.",
+        amount:30000,
+        duration:4,
+        type:"Personal",
+        intrest: 10
+    },
+    1003:{
+        id: "1003",
+        name: "New Wealth Trust",
+        amount:5000,
+        duration:1,
+        type:"Buisness",
+        intrest: 10
+    },
+    1004:{
+        id: "1004",
+        name: "IDIDI Bank",
+        amount:45000,
+        duration:1,
+        type:"Personal",
+        intrest: 10
+    },
+    1005:{
+        id: "1005",
+        name: "Premium Bank Corp.",
+        amount:80000,
+        duration:5,
+        type:"Personal",
+        intrest: 10
+    },
+    1006:{
+        id: "1006",
+        name: "IDIDI Bank",
+        amount:50000,
+        duration:8,
+        type:"Buisness",
+        intrest: 10
+    },
+    1007:{
+        id: "1007",
+        name: "New Wealth Trust",
+        amount:5000,
+        duration:3,
+        type:"Personal",
+        intrest: 10
+    },
+    1008:{
+        id: "1008",
+        name: "Rashi Bank",
+        amount:7000,
+        duration:2,
+        type:"Buisness",
+        intrest: 10
+    },
+    1009:{
+        id: "1009",
+        name: "Rashi Bank",
+        amount:12500,
+        duration:3,
+        type:"Personal",
+        intrest: 10
+    },
+    1010:{
+        id: "1010",
+        name: "New Wealth Trust",
+        amount:50000,
+        duration:12,
+        type:"Personal",
+        intrest: 10
+    }
+  
+    
+}
