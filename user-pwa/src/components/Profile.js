@@ -1,6 +1,37 @@
 import React, { Component } from 'react' 
 
+import {Link} from 'react-router-dom'
+
+import axios from 'axios'
+import { baseurl } from '../APIurl'
+
 class Profile extends Component{
+
+
+    constructor(props){
+        super(props)
+        this.state = {
+            name:"",
+            email:"",
+            aaid:"",
+            status:"",
+        }
+    }
+
+    componentDidMount(){
+        axios.get(baseurl+"pro/")
+            .then(res => {
+                let resp = res.data
+                console.log(resp)
+                this.setState({
+                    name:resp.name,
+                    email: resp.email ,
+                    aaid: resp.AA,
+                    status: resp.status,     
+                })
+            })
+    }
+
     render(){
         return(
             <section className="text-gray-500 body-font bg-gray-900">
@@ -27,7 +58,7 @@ class Profile extends Component{
                                             />
                                             <div className="flex-grow">
                                                 <h2 className="text-white title-font font-medium">
-                                                    John Doe
+                                                    {this.state.name}
                                                 </h2>
                                             </div>
                                         </div>
@@ -46,23 +77,33 @@ class Profile extends Component{
                                     </h2>
                                     <div className="justify-start">
                                         <span className="text-md pb-2 text-white">
-                                        Email Id : <span className="text-md font-bold text-orange-500">johndoe@gmail.com</span>
+                                        Email Id : <span className="text-md font-bold text-orange-500">{this.state.email}</span>
                                         </span>
                                         
                                         <br />
                                         <span className=" text-md pb-2 text-white">
-                                            AA Id : <span className="font-bold text-white">9791130165@onemoney</span>
+                                            AA Id : <span className="font-bold text-white">{this.state.aaid}</span>
                                         </span>
                                         <br />
                                         <span className="text-md pb-2 text-white">
-                                            Account Link Status : <span className="font-bold text-green-500">Done</span>
+                                            Account Link Status : <span className="font-bold text-green-500">{this.state.status}</span>
                                         </span>
                                         <br />
+                                        
                                         
                                 
                                     </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="flex justify-start pt-10">
+                                <Link to="/home">
+                                    <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded-full text-sm">Sign Out
+                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5 ml-1" viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </section>

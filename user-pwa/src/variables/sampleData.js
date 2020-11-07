@@ -4,7 +4,8 @@ const sampleData = [
         name: "Rashi Bank",
         amount:50000,
         duration:6,
-        type:"Buisness"
+        type:"Buisness",
+        intrest: 10
     }
 ]
 

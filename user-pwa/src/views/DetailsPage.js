@@ -135,6 +135,10 @@ const DetailsPage = (props) => {
                   <span className="text-xl pb-2 text-white">
                       Duration : <span className="font-bold text-white">{details.duration + " Months"}</span>
                   </span>
+                  <br />
+                  <span className="text-xl pb-2 text-white">
+                      Rate of interest : <span className="font-bold text-white">{details.intrest + " %"}</span>
+                  </span>
                 </div>
 
                 <ModalProvider>

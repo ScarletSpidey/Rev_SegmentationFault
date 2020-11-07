@@ -97,7 +97,11 @@ const LoanOfferCard = (props) => {
                     <span className="w-4/7 text-md">
                         Duration : <span className="font-bold text-white">{props.loanDuration + " Months"}</span>
                     </span>
+                    
                 </div>
+                <span className="w-full text-md">
+                        Rate of interest : <span className="font-bold text-white">{props.interest + " %"}</span>
+                    </span>
                 <div className="flex justify-end pt-10">
                     <Link to={`/loan/${props.id}`}>
                         <button className="inline-flex text-white bg-orange-500 border-0 py-1 px-4 focus:outline-none hover:bg-orange-600 rounded-full text-sm">Learn More

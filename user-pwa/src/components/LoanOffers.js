@@ -2,8 +2,40 @@ import React, { Component } from 'react'
 
 import LoanOfferCard from './LoanOfferCard'
 
+import {baseurl} from '../APIurl'
+
+import axios from 'axios'
 class LoanOffers extends Component{
+
+    constructor(props)  {
+        super(props)
+        this.state = {
+            amount :[],
+            duration:[],
+            id:[],
+            interest:[],
+            name:[],
+            type:[]
+        }
+    }
+
+    componentDidMount(){
+        axios.get(baseurl+"loans/")
+            .then(res => {
+                let resp = res.data
+                console.log(resp)
+                this.setState({
+                    amount :resp.amount,
+                    duration:resp.duration,
+                    id:resp.id,
+                    interest: resp.interest,
+                    name: resp.name,
+                    type:resp.type
+                })
+            })
+    }
     render(){
+        let i = 0
         return(
             <div>
                 <section className="text-gray-500 bg-gray-900 body-font px-5">
@@ -15,17 +47,28 @@ class LoanOffers extends Component{
                     </div>
 
                     <div className="flex flex-wrap -m-4 mb-6">
-                        <LoanOfferCard bankName="Rashi Bank" loanAmount={50000} loanDuration={6} loanType="Buisness" id="1001" />
-                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={30000} loanDuration={4} loanType="Personal" id="1002" />
-                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={10000} loanDuration={1} loanType="Buisness" id="1003" />
-                        <LoanOfferCard bankName="IDIDI Bank" loanAmount={5000} loanDuration={1} loanType="Personal" id="1004" />  
-                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={45000} loanDuration={5} loanType="Personal" id="1005" />
-                        <LoanOfferCard bankName="IDIDI Bank" loanAmount={80000} loanDuration={8} loanType="Buisness" id="1006" />
-                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={5000} loanDuration={3} loanType="Personal" id="1007" />
-                        <LoanOfferCard bankName="Rashi Bank" loanAmount={7000} loanDuration={2} loanType="Buisness" id="1008" />
-                        <LoanOfferCard bankName="New Wealth Trust" loanAmount={12500} loanDuration={3} loanType="Personal" id="1009" />
-                        <LoanOfferCard bankName="Premium Bank Corp." loanAmount={50000} loanDuration={12} loanType="Personal" id="1010" />
-
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        <LoanOfferCard bankName={this.state.name[i]} loanAmount={this.state.amount[i]} loanType={this.state.type[i]} id={this.state.id[i]} interest={this.state.interest[i]} loanDuration={this.state.duration[i]} />
+                        {i=i+1}
+                        
+                        
                     </div>
 
                 </section>
