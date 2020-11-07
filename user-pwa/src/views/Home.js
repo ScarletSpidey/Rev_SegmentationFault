@@ -26,9 +26,9 @@ const Home = () => {
                         <div className="flex flex-col sm:flex-row mt-10">
                             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                             <div className="flex flex-col items-center text-center justify-center">
-                                <h2 className="font-medium title-font mt-4 text-white text-lg">Phoebe Caulfield</h2>
+                                <h2 className="font-medium title-font mt-4 text-white text-lg">Don't be scared, be secured</h2>
                                 <div className="w-12 h-1 bg-orange-500 rounded mt-2 mb-4" />
-                                <p className="text-base text-gray-600">Raclette knausgaard hella meggs normcore williamsburg enamel pin sartorial venmo tbh hot chicken gentrify portland.</p>
+                                <p className="text-base text-gray-600">Have a transaction stuck up due to undelivered documentation? Unable to cope with the confusing and tedious procedure of taking out a loan? Then this is the app for you! Sign up and we promise your application will not bounce!</p>
                             </div>
                             </div>
                         </div>
