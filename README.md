@@ -6,54 +6,53 @@ Have a transaction stuck up due to undelivered documentation? Unable to cope wit
 
 ## Deliverables
 
-* ### [Presentation:](https://www.canva.com/design/DAEIzolMBu0/Aff8n0-juQ1MiF1ZEah5aw/view?utm_content=DAEIzolMBu0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) Please follow the link
+* ### [Presentation:]() Will be updated soon.
 * ### [Website:](https://stonks-b00mgpmji.vercel.app/) Please follow the link
 
 
 ## Overview  
 
 
-1. XGBoost is an ensemble technqiue based on decision trees that leverages gradient boosting for fast speed and high performance.
+Our country is filled with people who aren’t very stable financially. Unlike those of us who are better along with respect to our finances, they don’t have the liberty to get into the currently tedious process of taking out a loan. Ironically, in the “golden age” of technology, we have yet to find a holistic solution to this issue. Not everyone can obtain statements of their transaction history for the purpose of applying loans to NBFCs, even for meager amounts. One of the solutions is to give the companies access to their banking details to make the process more fluid. But that comes with your own privacy concerns. Giving out one’s banking details is equivalent to getting down on your knees waiting for a bear to pass without harming you. How do we solve this? This is the issue we’ve chosen  to focus on, because what better problem to find an innovative solution to an everyday problem that hundreds of thousands of people face.
 
 
-2. In XGBoost, decision trees are added to correct the errors made by the previous trees until no further improvements can be made.
+## Goals
+<h6> 1. API integrated account aggregator: </h6>
+Using a framework called Account Aggregator, the development of which involved the developers of UPI, we  have worked out a way to bridge the gap between banks who archive your info, and the Financial Information Users (Tertiary Banks and/or companies which require your information) that the user wants to share his/her details with, without putting himself in financial jeopardy. 
 
-
-3. It uses gradient descent to minimise the loss when adding new models. It has in-built regularisation.
-
-
-4. A max depth parameter is specified while designing XGBoost model. Once the tree reaches max depth,
-it starts pruning upwards removing branches with no positive gain.
-
-
-5. It takes advantage of hardware optimization to improve efficiency,reduce computational time and allocate optimal memory resources.
 
 ## Illustrations
 
 
-## A look at the code
+## A look at the User App
 
-The image that follows is a look at a snippet of the code behind the model.
+The image that follows is a look at the Get started page of the user app.
 
 <img src="images/codesnip.png">
 
-The image below shows the accuracy with which our model fits the dataset we train it on. As can be seen, it fits almost perfectly.
+The image below shows the login page of the user app.
 
 <img src="images/trainfit.png">
 
-What follows is the predicted stock prices for the next 10 days for a certain company.
+What follows is the home screen of the app post login.
+
+<img src="images/forcsnip.png">
+
+Below is the "Requests Tab".
 
 <img src="images/forcsnip.png">
 
 
 
-## A look at the UI
+## A look at the FIU Dashboard
 
-Even though the backend is what makes a product work, what sells it is its presentation. In other words, the frontend.
+The following are the two tabs of the FIU dashboard website.
  
  <img src="images/home.png">
  
  <img src="images/pasttrend.png">
+ 
+ The image below is what the admin can see, when they accept a request.
  
  <img src="images/forec.png">
  
@@ -63,7 +62,7 @@ Even though the backend is what makes a product work, what sells it is its prese
 
  * ### Karan Nandwani 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/karan-nandwani-16aa66176/)     [<img src="images/github.png">](https://github.com/karannandwani)
- * ### Arshit Kumar
+ * ### Tamizhiniyan S R
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/arshit-kumar-477850177/)     [<img src="images/github.png">](https://github.com/arshit30)
  * ### Shobit Puri 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/shobit-puri-3b30bb18b/)     [<img src="images/github.png">](https://github.com/ScarletSpidey)
