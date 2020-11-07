@@ -204,6 +204,6 @@ def rashi():
     for i in Z:
         t=Z[i]["name"]
         if t=="Rashi Bank":
-            D[j]=Z[i]
+            D[str(j)]=Z[i]
             j+=1
     return D
