@@ -30,33 +30,35 @@ One very simple way to bypass most attempts at data manipulation and credential 
 
 The image that follows is a look at the Get started page of the user app.
 
-<img src="images/codesnip.png">
+<img src="images/getstarted.png">
 
 The image below shows the login page of the user app.
 
-<img src="images/trainfit.png">
+<img src="images/login.png">
 
 What follows is the home screen of the app post login.
 
-<img src="images/forcsnip.png">
+<img src="images/home.png">
 
-Below is the "Requests Tab".
+Below is the "Request a loan Tab".
 
-<img src="images/forcsnip.png">
+<img src="images/requests.png">
 
 
 
 ## A look at the FIU Dashboard
 
-The following are the two tabs of the FIU dashboard website.
+The following are the three tabs of the FIU dashboard website.
  
- <img src="images/home.png">
+ <img src="images/whome.png">
  
- <img src="images/pasttrend.png">
+ <img src="images/wreq.png">
+ 
+ <img src="images/wreqdetails.png">
  
  The image below is what the admin can see, when they accept a request.
  
- <img src="images/forec.png">
+ <img src="images/wreqconfirmed.png">
  
 
 # Team
