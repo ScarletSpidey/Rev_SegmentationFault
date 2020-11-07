@@ -65,7 +65,7 @@ The following are the two tabs of the FIU dashboard website.
  * ### Karan Nandwani 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/karan-nandwani-16aa66176/)     [<img src="images/github.png">](https://github.com/karannandwani)
  * ### Tamizhiniyan S R
-   [<img src="images/linkedin.png">](https://www.linkedin.com/in/arshit-kumar-477850177/)     [<img src="images/github.png">](https://github.com/arshit30)
+   [<img src="images/linkedin.png">](https://www.linkedin.com/in/tamizhiniyansr/)     [<img src="images/github.png">](https://github.com/tamizhis5n)
  * ### Shobit Puri 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/shobit-puri-3b30bb18b/)     [<img src="images/github.png">](https://github.com/ScarletSpidey)
 * ### Aman Ojha
