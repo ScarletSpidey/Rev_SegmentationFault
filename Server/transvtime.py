@@ -107,6 +107,8 @@ def pro(s):
     D['dob']=sa[:2]+"-"+sa[2:4]+"-"+sa[4:]
     D['mob']="+91 "+z['transactions']['profile']['mobile']
     D['email']=z['transactions']['profile']['email']
+    D['AA']="1999999999@onemoney"
+    D["status"]="Linked"
     return D
 
 def fin(s):
