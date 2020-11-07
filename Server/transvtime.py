@@ -193,3 +193,5 @@ def loan():
         d["interest"]=interest[i]
         a.append(d)
     return a
+def bank():
+    return loan()[0]
