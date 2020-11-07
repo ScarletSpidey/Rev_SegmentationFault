@@ -193,7 +193,7 @@ def loan():
         d["duration"]=duration
         d["type"]=ty
         d["interest"]=interest
-        D[i]=d
+    D=d   
     return D
 def bank():
     return loan()[0]
