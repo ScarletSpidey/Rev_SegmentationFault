@@ -233,17 +233,17 @@ def rashi():
     for i in range(10):
         if name[i]=="Rashi Bank":
             ix.append(idx[i])
-            n.append(names[i])
+            n.append(name[i])
             a.append(amount[i])
             d.append(duration[i])
             t.append(ty[i])
             inte.append(interest[i])
     
-    
+    D={}
     D["id"]=ix
     D["name"]=n
     D["amount"]=a
     D["duration"]=d
-    D["type"]=ty
+    D["type"]=t
     D["interest"]=inte
     return D
