@@ -58,7 +58,7 @@ The following are the three tabs of the FIU dashboard website.
  
  The image below is what the admin can see, when they accept a request.
  
- <img src="images/wreqconfirmed.png">
+ <img src="images/wreqconfirm.png">
  
 
 # Team
