@@ -12,7 +12,7 @@ class Login extends Component{
                     <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
                         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
                         <h1 className="title-font font-medium text-3xl text-white">
-                            A Catchy Slogan 
+                        Got capital for investment? We got customers!
                         </h1>
                         <div className="flex mx-auto auto-items-center justify-center py-10">
                             <div className="w-1/2 bg-gray-600 rounded-full">
@@ -20,7 +20,7 @@ class Login extends Component{
                             </div>
                         </div>
                         <p className="leading-relaxed mt-4">
-                            Some text explaing the role of FIU. More Lines. More Lines. More Lines. More Lines. More Lines. More Lines. More Lines. More Lines.More Lines. More Lines. More Lines. More Lines. More Lines. More Lines. More Lines. More Lines. 
+                        A one stop shop for all your loan distribution management needs. Secure for the user, opportunity to secure revenue for you! Register your organisation and never miss an opportunity to monetize!
                         </p>
                         </div>
                         <div className="lg:w-2/6 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">

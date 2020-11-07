@@ -4,9 +4,11 @@ import LoanOfferCard from '../components/LoanOfferCard'
 import AddRemoveLoans from '../components/AddRemoveLoans'
 import LoanRequests from '../components/LoanRequests'
 
+
+
 const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
-
+    
   
   return (
     <>
@@ -65,9 +67,8 @@ const Tabs = ({ color }) => {
                                 <div className="container px-5 py-12 mx-auto">
                                     <div className="">
                                         <center>
-                                            <LoanOfferCard type="Buisness" amount={10000} duration={6} id="1001" interest={10} />
-                                            <LoanOfferCard type="Buisness" amount={10000} duration={6} id="1001" interest={10} />
-                                            <LoanOfferCard type="Buisness" amount={10000} duration={6} id="1001" interest={10} />
+                                            <LoanOfferCard />
+                                            
                                         </center>
                                     </div>
                                 </div>
@@ -82,7 +83,7 @@ const Tabs = ({ color }) => {
                                     </h1>
                                     </div>
                                 </div>
-                                <LoanRequests name="John Doe" aaid="9791130165@onemoney" loanid="1001" loanAmount={60000} requestid="1001"/>
+                                <LoanRequests name="Akshay Kumar" aaid="1999999999@onemoney" loanid="1001" loanAmount={60000} requestid="1001"/>
                                 
                             </section>                            
                         </div>
