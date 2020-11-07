@@ -197,3 +197,13 @@ def loan():
     return D
 def bank():
     return loan()[0]
+def rashi():
+    Z=loan()
+    D={}
+    j=0
+    for i in Z:
+        t=Z[i]["name"]
+        if t=="Rashi Bank":
+            D[j]=Z[i]
+            j+=1
+    return D
