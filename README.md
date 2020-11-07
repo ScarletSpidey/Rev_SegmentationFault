@@ -20,6 +20,8 @@ Our country is filled with people who aren’t very stable financially. Unlike t
 <h6> 1. API integrated account aggregator: </h6>
 Using a framework called Account Aggregator, the development of which involved the developers of UPI, we  have worked out a way to bridge the gap between banks who archive your info, and the Financial Information Users (Tertiary Banks and/or companies which require your information) that the user wants to share his/her details with, without putting himself in financial jeopardy. 
 
+<h6> 2. Dynamically Granular access control: </h6>
+One very simple way to bypass most attempts at data manipulation and credential phishing is to limit the duration of access which is available to the FIU. Our solution gives the user absolute control over his/her data and makes it super easy for them to control how much information is to be shared (explicit queries) and for how long it is to be shared (Access tenure control).
 
 ## Illustrations
 
