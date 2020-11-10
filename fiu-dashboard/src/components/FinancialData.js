@@ -49,7 +49,7 @@ class FinancialData extends Component{
                             </span>
                             <br />
                             <span className="text-white text-xl font-medium mb-6">
-                                Recurring Deposit : <span className="font-bold text-green-500" > ₹{this.state.rex} </span>
+                                Recurring Deposit : <span className="font-bold text-green-500" > ₹{this.state.rec} </span>
                             </span>
                             <br />
                             <span className="text-white text-xl font-medium mb-6">
