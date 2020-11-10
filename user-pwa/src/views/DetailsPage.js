@@ -49,7 +49,7 @@ const ModalContent2 = () => {
   )
 }
 
-const ModalContent = () => {
+const ModalContent = (props) => {
     const { isModalOpen, openModal, closeModal } = useModal();
     return (
       <>
@@ -69,7 +69,7 @@ const ModalContent = () => {
             </p>
             <input
               className="bg-gray-800 rounded-full border border-gray-700 focus:outline-none focus:border-orange-500 text-base text-white px-4 py-2 mb-4"
-              placeholder="Enter your6 digit OTP number"
+              placeholder="Enter your 6 digit OTP number"
               type="text"
             />
             <ModalContent2 />
@@ -78,9 +78,10 @@ const ModalContent = () => {
         </Modal>
         
         <div className="text-center pt-12">
-            <span className="text-2xl font-bold pb-6 text-white">
-            Would you like to Request for this Loan ? 
+            <span className="text-xl font-bold pb-6 text-white">
+              Do you consent to provide your financial  information to {props.bankName} for 10 Days?
             </span>
+
         </div>
         <div className="flex justify-center pt-4">
             <button onClick={openModal} className="inline-flex text-white font-bold bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded-full text-lg">Yes</button>
@@ -142,7 +143,7 @@ const DetailsPage = (props) => {
                 </div>
 
                 <ModalProvider>
-                    <ModalContent />
+                    <ModalContent bankName={details.name} />
                 </ModalProvider>
                 </div>
             </div>
