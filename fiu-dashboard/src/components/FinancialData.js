@@ -28,7 +28,7 @@ class FinancialData extends Component{
                 avg : resp.avg,
                 cur:  resp.cur,
                 fix:  resp.fix,
-                rec: resp.avg
+                rec: resp.rec
             })
         })
     }
